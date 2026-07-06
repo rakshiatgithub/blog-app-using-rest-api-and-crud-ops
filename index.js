@@ -2,11 +2,11 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path");
-// import { v4 as uuidv4 } from 'uuid';
+
 const { v4: uuidv4 } = require('uuid');
 const methodOverride = require("method-override")
 
-// uuidv4(); // ⇨ 'b18794e8-5d0d-417c-b361-ba38e78411b4'
+
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
     {    id:uuidv4(),
-        username: "apnacollege",
+        username: "raksh_learns",
         content:" I love coding"
     },
     {   id:uuidv4(),
@@ -46,7 +46,7 @@ app.post("/posts", (req,res) => {
      let id = uuidv4(); 
     posts.push({id, username ,content});
     res.redirect("/posts");
-//    res.send("post request working");
+
 });
 
 app.get("/posts/:id",(req,res) => {
