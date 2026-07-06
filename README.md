@@ -77,6 +77,25 @@ This project helped me understand:
 - Static file serving
 - Middleware in Express
 
+- ## Project Structure
+
+
+rest_class/
+├── public/
+│   └── style.css
+├── views/
+│   ├── edit.ejs
+│   ├── index.ejs
+│   ├── new.ejs
+│   └── show.ejs
+├── .gitignore
+├── index.js
+├── package.json
+├── package-lock.json
+└── README.md
+
+
+
 ## Future Improvements
 
 - Database integration (MongoDB/MySQL)
