@@ -61,7 +61,6 @@ app.patch("/posts/:id", (req,res) =>{
     let post = posts.find((p) => id === p.id);
     post.content = newContent;
     res.send(" Patch request working");
-    res.redirect("/posts")
 
 });
 
